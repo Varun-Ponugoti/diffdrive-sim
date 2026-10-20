@@ -1,6 +1,6 @@
-# robo — Differential-Drive Robot with Gazebo Simulation & SLAM
+# Differential-Drive Robot with Gazebo Simulation & SLAM
 
-A ROS 2 package for a simple two-wheeled differential-drive robot equipped with a 2D lidar and an RGB camera. The robot is simulated in Gazebo Classic inside an obstacle world, and uses [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox) to build a map of the environment and localize within it.
+A ROS 2 package for a simple four-wheeled differential-drive robot equipped with a lidar and an RGB camera. The robot is simulated in Gazebo Classic inside an obstacle world, and uses [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox) to build a map of the environment and localize within it.
 
 <!-- Add a screenshot or GIF of the robot in Gazebo / RViz here -->
 <!-- ![demo](docs/demo.gif) -->
@@ -80,10 +80,8 @@ sudo apt install \
 ## Installation
 
 ```bash
-mkdir -p ~/proj/src
-cd ~/proj/src
-git clone https://github.com/YOUR_USERNAME/robo.git .
-cd ~/proj
+git clone https://github.com/Varun-Ponugoti/diffdrive-sim.git .
+cd ~/diffdrive-sim
 colcon build --symlink-install
 source install/setup.bash
 ```
@@ -211,11 +209,3 @@ After changing anything in `config/`, `launch/`, `description/`, or `worlds/`, r
 - **SLAM ignores the config file.** Confirm you're using the right argument name for your ROS distro (`slam_params_file` on Humble, `params_file` on Foxy).
 - **The teleop window doesn't open.** Install xterm: `sudo apt install xterm`.
 
-## License
-
-<!-- Choose a license (e.g. MIT, Apache-2.0) and update package.xml to match -->
-TBD
-
-## Author
-
-Varun — varunponugoti5@gmail.com
